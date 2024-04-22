@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import { data } from "../restApi.json";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
-    <>
+
       <nav>
-        <div className="logo">ZEESH</div>
+        <div className="logo">Flavor Fusion</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            {data[0].navbarLinks.map((element) => (
+            
+            {data[0].navbarLinks.map((element) => {
+              return(
               <Link
                 to={element.link}
                 spy={true}
@@ -20,16 +23,19 @@ const Navbar = () => {
               >
                 {element.title}
               </Link>
-            ))}
+              );
+            })}
           </div>
-          <button className="menuBtn">OUR MENU</button>
+         <a href="Qualities.jsx"> <button className="menuBtn">OUR MENU</button></a>
         </div>
         <div className="hamburger" onClick={()=> setShow(!show)}>
                 <GiHamburgerMenu/>
         </div>
       </nav>
-    </>
-  );
+  
+  )
 };
+
+
 
 export default Navbar;

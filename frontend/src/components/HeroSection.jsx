@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const HeroSection = () => {
   return (
     <section className="heroSection" id="heroSection">
-      <Navbar />
+      <Navbar/>
       <div className="container">
         <div className="banner">
           <div className="largeBox">
@@ -12,7 +12,7 @@ const HeroSection = () => {
           </div>
           <div className="combined_boxes">
             <div className="imageBox">
-              <img src="./hero1.png" alt="hero" />
+              <img src="./hero1.png" alt="hero1" />
             </div>
             <div className="textAndLogo">
               <div className="textWithSvg">
@@ -26,7 +26,7 @@ const HeroSection = () => {
         </div>
         <div className="banner">
           <div className="imageBox">
-            <img src="hero2.png" alt="hero" />
+            <img src="./hero2.png" alt="hero2" />
           </div>
           <h1 className="title dishes_title">Dishes</h1>
         </div>
